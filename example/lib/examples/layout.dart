@@ -28,6 +28,7 @@ class LayoutExample extends StatelessWidget {
           ),
         ],
       ),
+      centerTitle: false,
       endIcon: Icons.filter_list,
       endDrawer: ListView(
         children: <Widget>[

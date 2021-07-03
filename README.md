@@ -1,11 +1,6 @@
-[![Flutter Community: responsive_scaffold](https://fluttercommunity.dev/_github/header/responsive_scaffold)](https://github.com/fluttercommunity/community)
+> Null-Safe Version of [Responsive Scaffold](https://pub.dev/packages/responsive_scaffold)
 
-[![Buy Me A Coffee](https://img.shields.io/badge/Donate-Buy%20Me%20A%20Coffee-yellow.svg)](https://www.buymeacoffee.com/rodydavis)
-[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=WSH3GVC49GNNJ)
-[![pub package](https://img.shields.io/pub/v/responsive_scaffold.svg)](https://pub.dartlang.org/packages/responsive_scaffold)
-![github pages](https://github.com/fluttercommunity/responsive_scaffold/workflows/github%20pages/badge.svg)
-
-# responsive_scaffold
+# responsive_scaffold_nullsafe
 
 View the online demo [here](https://fluttercommunity.github.io/responsive_scaffold/)!
 
@@ -21,7 +16,7 @@ Online Demo: https://fluttercommunity.github.io/responsive_scaffold/
 
 ### Responsive Layout
 
-Follows Material Design Layout [Docs](https://material.io/design/layout/responsive-layout-grid.html#grid-behavior). 
+Follows Material Design Layout [Docs](https://material.io/design/layout/responsive-layout-grid.html#grid-behavior).
 
 ![md-layout](https://github.com/fluttercommunity/responsive_scaffold/blob/master/doc/screenshots/layout/md-layout.gif)
 
@@ -34,10 +29,9 @@ Here is a demo on various sizes.
 ![image](https://github.com/fluttercommunity/responsive_scaffold/blob/master/doc/screenshots/layout/4.png)
 ![image](https://github.com/fluttercommunity/responsive_scaffold/blob/master/doc/screenshots/layout/5.png)
 
-
 #### Example
 
-``` dart 
+```dart
 import 'package:flutter/material.dart';
 import 'package:responsive_scaffold/responsive_scaffold.dart';
 
@@ -127,20 +121,19 @@ class LayoutExample extends StatelessWidget {
 
 ### Responsive List
 
-* You can use this in two modes `ResponsiveListScaffold` and `ResponsiveListScaffold.builder`.
-* On Mobile the ListView will push to the details screen
+- You can use this in two modes `ResponsiveListScaffold` and `ResponsiveListScaffold.builder`.
+- On Mobile the ListView will push to the details screen
 
 ![tablet](https://github.com/fluttercommunity/responsive_scaffold/blob/master/doc/screenshots/tablet.png)
 ![push](https://github.com/fluttercommunity/responsive_scaffold/blob/master/doc/screenshots/push.png)
 ![mobile](https://github.com/fluttercommunity/responsive_scaffold/blob/master/doc/screenshots/mobile.png)
 
-* On Tablet it will show a Master Detail View.
-* You can add additional Slivers to the Scrollview and the AppBar is optional.
-
+- On Tablet it will show a Master Detail View.
+- You can add additional Slivers to the Scrollview and the AppBar is optional.
 
 ##### Example
 
-``` dart 
+```dart
 import 'package:flutter/material.dart';
 import 'package:responsive_scaffold/responsive_scaffold.dart';
 

@@ -6,34 +6,35 @@ class ResponsiveScaffold extends StatelessWidget {
     this.scaffoldKey,
     this.drawer,
     this.endDrawer,
-    this.title,
+    this.appBar,
     this.body,
+    this.title,
     this.trailing,
+    this.centerTitle,
     this.floatingActionButton,
     this.menuIcon,
     this.endIcon,
     this.kTabletBreakpoint = 720.0,
     this.kDesktopBreakpoint = 1440.0,
-    this.appBarElevation,
   }) : super(key: key);
 
   final Widget? drawer, endDrawer;
 
-  final Widget? title;
+  final AppBar? appBar;
 
   final Widget? body;
 
-  final Widget? trailing;
-
   final Widget? floatingActionButton;
+
+  final Widget? title;
+  final Widget? trailing;
+  final bool? centerTitle;
 
   final double kTabletBreakpoint;
   final double kDesktopBreakpoint;
   double get _drawerWidth => 304.0;
 
   final IconData? menuIcon, endIcon;
-
-  final double? appBarElevation;
 
   final Key? scaffoldKey;
 
@@ -60,16 +61,7 @@ class ResponsiveScaffold extends StatelessWidget {
                     Expanded(
                       child: Scaffold(
                         key: scaffoldKey,
-                        appBar: AppBar(
-                          elevation: appBarElevation,
-                          automaticallyImplyLeading: false,
-                          title: title,
-                          actions: <Widget>[
-                            if (trailing != null) ...[
-                              trailing!,
-                            ],
-                          ],
-                        ),
+                        appBar: appBar,
                         body: Row(
                           children: <Widget>[
                             Expanded(
@@ -114,9 +106,9 @@ class ResponsiveScaffold extends StatelessWidget {
                     ),
                   ),
             appBar: AppBar(
-              elevation: appBarElevation,
               automaticallyImplyLeading: false,
               title: title,
+              centerTitle: centerTitle,
               leading: _MenuButton(iconData: menuIcon),
               actions: <Widget>[
                 if (trailing != null) ...[
@@ -176,8 +168,8 @@ class ResponsiveScaffold extends StatelessWidget {
                   ),
                 ),
           appBar: AppBar(
-            elevation: appBarElevation,
             automaticallyImplyLeading: false,
+            centerTitle: centerTitle,
             leading: _MenuButton(iconData: menuIcon),
             title: title,
             actions: <Widget>[
